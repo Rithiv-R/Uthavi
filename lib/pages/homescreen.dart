@@ -188,7 +188,7 @@ class _HomeState extends State<Home> {
                                   height: 20,
                                 ),
                                 Text(
-                                  'Settings',
+                                  'About App',
                                   style: TextStyle(
                                       color: c1,
                                       fontSize: 17,

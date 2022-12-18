@@ -270,13 +270,73 @@ class _selectionState extends State<selector1> {
                           )
                         ],
                       ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                        'Summarized Information:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
                       if (districtinfo != null)
-                        Column(
-                          children: <Widget>[
-                            Text(districtinfo.title),
-                            Text(districtinfo.description),
-                            Text(districtinfo.extract),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: <Widget>[
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Title:',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Expanded(child: Text(districtinfo.title))
+                                ],
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Description:',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                  Expanded(
+                                      child: Text(districtinfo.description))
+                                ],
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Summary:',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                  Expanded(child: Text(districtinfo.extract))
+                                ],
+                              ),
+                            ],
+                          ),
                         )
                     ],
                   )
