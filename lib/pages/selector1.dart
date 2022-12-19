@@ -1,16 +1,10 @@
-import 'dart:io';
 import 'package:busz/history/history1.dart';
-import 'package:busz/pages/start.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
 import 'package:share/share.dart';
 import 'package:transition/transition.dart';
 import 'package:wikidart/wikidart.dart';
-
-import '../uploader/upload.dart';
 
 class selector1 extends StatefulWidget {
   var imageurl;
@@ -30,6 +24,7 @@ class _selectionState extends State<selector1> {
   @override
   void initState() {
     email = FirebaseAuth.instance.currentUser!.email;
+
     sender(widget.imageurl);
 
     super.initState();
@@ -134,7 +129,7 @@ class _selectionState extends State<selector1> {
               width: 300,
               child: Image.network(
                 widget.imageurl,
-                fit: BoxFit.cover,
+                fit: BoxFit.contain,
               ),
             ),
             SizedBox(
@@ -273,13 +268,14 @@ class _selectionState extends State<selector1> {
                       SizedBox(
                         height: 30,
                       ),
-                      Text(
-                        'Summarized Information:',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 17,
+                      if (districtinfo != null)
+                        Text(
+                          'Summarized Information:',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17,
+                          ),
                         ),
-                      ),
                       SizedBox(
                         height: 20,
                       ),

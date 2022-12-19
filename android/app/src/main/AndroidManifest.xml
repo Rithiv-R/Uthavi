@@ -14,7 +14,7 @@
         </intent>
     </queries>
    <application
-        android:label="busz"
+        android:label="UTHAVI"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

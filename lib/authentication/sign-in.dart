@@ -4,6 +4,7 @@ import 'package:busz/authentication/sign-up.dart';
 import 'package:busz/pages/homescreen.dart';
 import 'package:busz/pages/selection.dart';
 import 'package:busz/pages/start.dart';
+import 'package:busz/splash/splash1.dart';
 import 'package:busz/uploader/upload.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -199,7 +200,7 @@ class _SignInState extends State<SignIn> {
                                   email: email, password: password)
                               .then((_) =>
                                   Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => Home(),
+                                    builder: (context) => SplashScreen(),
                                   )));
                         }),
                   )

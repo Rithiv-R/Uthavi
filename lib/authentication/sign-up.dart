@@ -1,5 +1,6 @@
 import 'package:busz/authentication/sign-in.dart';
 import 'package:busz/pages/start.dart';
+import 'package:busz/splash/splash1.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -223,7 +224,8 @@ class _SignUpState extends State<SignUp> {
                                       'list': [],
                                     }).then((value) => Navigator.of(context)
                                                 .push(MaterialPageRoute(
-                                              builder: (context) => StartPage(),
+                                              builder: (context) =>
+                                                  SplashScreen(),
                                             ))));
                           } else {
                             dis1(context,

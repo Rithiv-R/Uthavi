@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:busz/authentication/sign-in.dart';
 import 'package:busz/history/history1.dart';
+import 'package:busz/pages/aboutapp.dart';
 import 'package:busz/pages/start.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -174,7 +175,14 @@ class _HomeState extends State<Home> {
                       padding: EdgeInsets.all(20),
                       child: GestureDetector(
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.pushReplacement(
+                                context,
+                                Transition(
+                                    child: Aboutapp(),
+                                    transitionEffect:
+                                        TransitionEffect.RIGHT_TO_LEFT));
+                          },
                           splashColor: Colors.black,
                           child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,

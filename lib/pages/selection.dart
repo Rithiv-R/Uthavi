@@ -74,6 +74,7 @@ class _selectionState extends State<selection> {
           }
         });
       });
+
       FirebaseFirestore.instance
           .collection('history')
           .doc(email)
@@ -179,7 +180,7 @@ class _selectionState extends State<selection> {
               width: 300,
               child: Image.file(
                 File(widget.image.path),
-                fit: BoxFit.cover,
+                fit: BoxFit.contain,
               ),
             ),
             SizedBox(
@@ -318,13 +319,14 @@ class _selectionState extends State<selection> {
                       SizedBox(
                         height: 30,
                       ),
-                      Text(
-                        'Summarized Information:',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 17,
+                      if (districtinfo != null)
+                        Text(
+                          'Summarized Information:',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17,
+                          ),
                         ),
-                      ),
                       SizedBox(
                         height: 20,
                       ),
