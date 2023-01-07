@@ -12,3 +12,12 @@
 3.Its starts executing in loaclhost -> http://127.0.0.1:5000
 
 
+## Running Flutter Execution:
+
+1.Install Flutter version specified in pubspec.yaml
+
+2.Android Studio
+
+3.Install all the Dependencies mentioned in pubspec.yaml
+
+4.Run Android Emulator : with Flutter run Command
